@@ -55,6 +55,7 @@ public class CashRegisterTest {
     cashRegister.process(purchase);
 
     verify(printer).print(purchase.asString());
+    verify(purchase,times(2)).asString();
   }
 
 }
